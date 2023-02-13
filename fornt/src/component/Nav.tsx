@@ -18,12 +18,16 @@ import {
     useColorMode,
     useColorModeValue,
     useDisclosure,
-    Image
+    Image,
+    InputGroup,
+    InputLeftElement,
+    Input,
+    InputRightElement
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
 
 import { IoIosArrowDown } from "react-icons/io";
-import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
+import { AiFillHome, AiOutlineInbox, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link as RouteLink } from 'react-router-dom'
@@ -46,7 +50,7 @@ function Nav() {
 
   const MobileNavContent = (
     <VStack
-      pos="relative"
+      pos="fixed"
       top={0}
       left={0}
       right={0}
@@ -73,10 +77,9 @@ function Nav() {
       <Link href="#about">
       <Button
         w="full"
-        variant="solid"
+        variant="ghost"
         colorScheme="brand"
-        leftIcon={<AiOutlineInbox />}
-      >
+        leftIcon={<AiOutlineInbox />}>
         جميع الشركات
       </Button>
       </Link>
@@ -99,11 +102,11 @@ function Nav() {
       pos={"relative"}
       overflowY="hidden"
       borderBottomWidth={2}
-      color="gray.200"
+      // color="gray.200"
       _dark={{ color: "gray.900" }}
       id="header"
     >
-      <chakra.div h="4.5rem" mx="auto" maxW="1200px">
+      <chakra.div h="4.5rem" mx="auto" maxW="100%">
         <Flex
           w="full"
           h="full"
@@ -121,7 +124,7 @@ function Nav() {
           </Flex>
           <Flex>
             <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-            <Link href="#home">
+            <RouteLink to={"/"}>
               <Button
                 bg={bg}
                 color="gray.500"
@@ -132,7 +135,7 @@ function Nav() {
                 _focus={{ boxShadow: "none" }}>
                   الصفحة الرئيسية
               </Button>
-              </Link>
+              </RouteLink>
               <RouteLink to="/companies">
                 <Button
                   bg={bg}
@@ -145,7 +148,7 @@ function Nav() {
                     جميع الشركات
                 </Button>
               </RouteLink>
-              <Link href='#projects'>
+              <RouteLink to={"/calculator"}>
               <Button
                 bg={bg}
                 color="gray.500"
@@ -156,10 +159,17 @@ function Nav() {
                 _focus={{ boxShadow: "none" }}>
                     الحاسبة
               </Button>
-              </Link>
+              </RouteLink>
             </HStack>
           </Flex>
           <Flex justify="flex-end" align="center" color="gray.400">
+
+          <InputGroup>
+              <InputRightElement pointerEvents="none" >
+                <AiOutlineSearch />
+              </InputRightElement>
+              <Input type="tel" placeholder="بحث..." mr={"10px"}/>
+            </InputGroup>
             
             <IconButton
               size="md"

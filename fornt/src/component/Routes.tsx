@@ -3,6 +3,7 @@ import { Routes as Routess, Route } from 'react-router-dom'
 import Calculator from './Calculator'
 import Companies from './Companies'
 import Footer from './Footer'
+import Home from './Home'
 import Nav from './Nav'
 
 
@@ -14,8 +15,9 @@ function Routes() {
   <>
   <Nav/>
 <Routess>
-        <Route  path='/' element={<Calculator/>}></Route>
+        <Route  path='/' element={<Home/>}></Route>
         <Route  path='/companies' element={<Companies/>}></Route>
+        <Route  path='/calculator' element={<Calculator/>}></Route>
     </Routess>
     <Footer/>
   </>
