@@ -88,9 +88,7 @@ import {
           >
             <Stack spacing={6} bg="#d4d0d0">
               
-              <Text bg="#d4d0d0" fontSize={"sm"}>
-                © 2022 Chakra Templates. All rights reserved
-              </Text>
+             
               <Stack direction={"row"} spacing={6} bg="#d4d0d0">
                 <SocialButton label={"Twitter"} href={"https://twitter.com/"}>
                   <FaTwitter />
@@ -106,18 +104,14 @@ import {
             <Stack bg="#d4d0d0" align={"flex-start"}>
               <Text fontSize={25} bg="#d4d0d0">Company</Text>
               <Link href={"#"}>About us</Link>
-              <Link href={"#"}>Blog</Link>
               <Link href={"#"}>Contact us</Link>
-              <Link href={"#"}>Pricing</Link>
-              <Link href={"#"}>Testimonials</Link>
+             
             </Stack>
             <Stack bg="#d4d0d0" align={"flex-start"}>
               <Text fontSize={25} bg="#d4d0d0">Support</Text>
               <Link href={"#"}>Help Center</Link>
               <Link href={"#"}>Terms of Service</Link>
-              <Link href={"#"}>Legal</Link>
-              <Link href={"#"}>Privacy Policy</Link>
-              <Link href={"#"}>Satus</Link>
+           
             </Stack>
             <Stack align={"flex-start"}bg='#d4d0d0'>
               <Text fontSize={25} bg="#d4d0d0" >Stay up to date</Text>
