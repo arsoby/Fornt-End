@@ -56,7 +56,6 @@ function Chatbot() {
       <Button mr={5}
       position='fixed'
       borderRadius={100}
-      size='lg'
       colorScheme="teal" onClick={onOpen}>
        
         <AiFillRobot/>
@@ -77,6 +76,10 @@ function Chatbot() {
 
           <DrawerBody >
           <AiFillRobot  size={50}/>
+          <Box mt={2} mb={5}>
+            
+            <Text mt={2}  bg='green' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
+            <AiFillRobot  size={50}/>
             <Flex justifyContent="center" gap={3} mt={3} >
               <Button onClick={() => show(1)}>الشركات الاكثر ربحا</Button>
               <Button onClick={() => show(2)}>الشركات الاكثر خساره</Button>
@@ -86,9 +89,7 @@ function Chatbot() {
               <Button onClick={() => show(3)}>الشركات الحلال</Button>
               <Button onClick={() => show(4)}>  اخر الاخبار</Button>
             </Flex>
-            <Box mt={20}>
-            <AiFillRobot  size={50}/>
-            <Text mt={2}  bg='green' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
+          
           </DrawerBody>
 
           <DrawerFooter bg="#d4d0d0">
