@@ -33,12 +33,16 @@ function Chatbot() {
       case 2:
         // execute case y code block
         setData("الاكثر خساره هي مايكروسفت");
+        break;
+
         case 3:
           // execute case y code block
-          setData("الاكثر خساره هي مايكروسفت");
+          setData("الاكثر الحلال هي مايكروسفت");
+          break;
+
           case 4:
             // execute case y code block
-            setData("الاكثر خساره هي مايكروسفت");
+            setData("   اخر الاخبار ");
       
         break;
       default:
@@ -51,6 +55,8 @@ function Chatbot() {
       
       <Button mr={5}
       position='fixed'
+      borderRadius={100}
+      size='lg'
       colorScheme="teal" onClick={onOpen}>
        
         <AiFillRobot/>
@@ -82,7 +88,7 @@ function Chatbot() {
             </Flex>
             <Box mt={20}>
             <AiFillRobot  size={50}/>
-            <Text mt={3}  bg='green' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
+            <Text mt={2}  bg='green' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
           </DrawerBody>
 
           <DrawerFooter bg="#d4d0d0">
