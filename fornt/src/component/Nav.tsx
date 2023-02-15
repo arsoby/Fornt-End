@@ -31,12 +31,13 @@ import { AiFillHome, AiOutlineInbox, AiOutlineMenu, AiOutlineSearch } from "reac
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link as RouteLink } from 'react-router-dom'
+import Chatbot from './Chatbot';
 function Nav() {
 
     const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("fffff", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const bg = useColorModeValue("#39505F", "gray.800");
+  const bg = useColorModeValue("#001F33", "gray.800");
   const ref = React.useRef<HTMLDivElement | null>(null);
   const [y, setY] = React.useState(0);
   const height = ref.current ? ref.current.getBoundingClientRect() : 0;
@@ -91,6 +92,7 @@ function Nav() {
   );
 
   return (
+    <>
     <chakra.header
       ref={ref}
       shadow={y > height ? "sm" : undefined}
@@ -191,6 +193,8 @@ function Nav() {
         {MobileNavContent}
       </chakra.div>
     </chakra.header>
+      <Chatbot/>
+</>
   )
 }
 

@@ -13,6 +13,7 @@ import {
   Switch,
   Flex,
   Box,
+  localStorageManager,
 } from "@chakra-ui/react";
 import React from "react";
 import { AiFillRobot } from "react-icons/ai";
@@ -26,13 +27,14 @@ function Chatbot() {
   const show = (n: any) => {
     switch (n) {
       case 1:
-        
-         setData("الاكثر رحبا سدايا")
+
+
+         setData(`الاكثر رحبا سدايا`)
         console.log(data);
         break;
       case 2:
         // execute case y code block
-        setData("الاكثر خساره هي مايكروسفت");
+        setData(" الاكثر خساره هي مايكروسفت");
         break;
 
         case 3:
@@ -51,10 +53,12 @@ function Chatbot() {
   };
 
   return (
-    <div>
+    <Box>
       
       <Button mr={5}
-      position='fixed'
+      size='lg'
+      mt='80vh'
+      position="fixed"
       borderRadius={100}
       colorScheme="teal" onClick={onOpen}>
        
@@ -78,7 +82,7 @@ function Chatbot() {
           <AiFillRobot  size={50}/>
           <Box mt={2} mb={5}>
             
-            <Text mt={2}  bg='green' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
+            <Text mt={2}  bg='gray.500' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
             <AiFillRobot  size={50}/>
             <Flex justifyContent="center" gap={3} mt={3} >
               <Button onClick={() => show(1)}>الشركات الاكثر ربحا</Button>
@@ -99,7 +103,7 @@ function Chatbot() {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </div>
+    </Box>
   );
 }
 
