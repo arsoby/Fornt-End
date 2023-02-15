@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MicosoftLogo from './../assets/microsoft.png'
 import axios from 'axios'
+import Marque from './Marque'
 
 function Companies() {
     const [data,setData]=React. useState<any[]>([]);
@@ -17,7 +18,8 @@ function Companies() {
 
   return (
     <>
-
+    <br></br>
+<Marque/>
     <Box ml={"10%"} mr={"10%"} >
         <br></br>
         <Heading size='lg'>جميع الشركات</Heading>

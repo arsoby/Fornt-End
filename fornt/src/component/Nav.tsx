@@ -46,7 +46,7 @@ function Nav() {
   React.useEffect(() => {
     return scrollY.onChange(() => setY(scrollY.get()));
   }, [scrollY]);
-  const cl = useColorModeValue("gray.800", "white");
+  const cl = useColorModeValue("white", "white");
   const mobileNav = useDisclosure();
 
   const MobileNavContent = (
@@ -169,7 +169,7 @@ function Nav() {
               <InputRightElement pointerEvents="none" >
                 <AiOutlineSearch />
               </InputRightElement>
-              <Input color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
+              <Input bg={'white'} color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
             </InputGroup>
             
             <IconButton

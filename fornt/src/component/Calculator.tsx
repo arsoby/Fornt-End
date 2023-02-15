@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, Input,Text } from "@chakra-ui/react";
 import React from "react";
+import Marque from "./Marque";
 
 function Calculator() {
 
@@ -26,6 +27,7 @@ function Calculator() {
     }
   return (
     <div>
+      <Marque/>
       <Flex 
       mt={100}
       alignItems="center"
