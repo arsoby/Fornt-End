@@ -17,7 +17,7 @@ function Marque() {
   return (
     <>
     <br></br>
-      <Marquee pauseOnHover={true} className={"marquee"} speed={60}>
+      <Marquee pauseOnHover={true} className={"marquee"} speed={60} >
           <SimpleGrid
             display={"flex"}
             justifyContent={"space-between"}
