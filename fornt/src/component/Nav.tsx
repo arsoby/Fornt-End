@@ -46,7 +46,7 @@ function Nav() {
   React.useEffect(() => {
     return scrollY.onChange(() => setY(scrollY.get()));
   }, [scrollY]);
-  const cl = useColorModeValue("white", "white");
+  const cl = useColorModeValue("gray.800", "white");
   const mobileNav = useDisclosure();
 
   const MobileNavContent = (
