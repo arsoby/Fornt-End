@@ -170,18 +170,9 @@ function Nav() {
               <Input color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
             </InputGroup>
             
-            <IconButton
-              size="md"
-              fontSize="lg"
-              aria-label={`Switch to ${text} mode`}
-              variant="ghost"
-              color="current"
-              ml={{ base: "0", md: "3" }}
-              onClick={toggleMode}
-              icon={<SwitchIcon />}
-            />
+
             <RouteLink to={"/login"}>
-            <Button>
+            <Button mr={"2"}>
               تسجيل دخول
             </Button>
             </RouteLink>
