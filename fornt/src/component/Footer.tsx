@@ -83,7 +83,7 @@ import Chatbot from "./Chatbot";
       <Box
         bg={useColorModeValue("#001F33", "#d4d0d0")}
         color={useColorModeValue("white", "whiteAlpha")}
-        mt={100}
+        mt={15}
       >
         <Container as={Stack} maxW={"6xl"} py={10} bg="#001F33">
           <SimpleGrid

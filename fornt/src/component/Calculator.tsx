@@ -29,7 +29,7 @@ function Calculator() {
     <div>
       <Marque/>
       <Flex 
-      mt={100}
+      mt={20}
       alignItems="center"
       justifyContent="center"
       gap="40">
@@ -77,6 +77,7 @@ function Calculator() {
         </Box>
         
       </Flex>
+      <br></br>
     </div>
   );
 }
