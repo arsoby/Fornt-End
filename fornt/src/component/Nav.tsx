@@ -180,6 +180,11 @@ function Nav() {
               onClick={toggleMode}
               icon={<SwitchIcon />}
             />
+            <RouteLink to={"/login"}>
+            <Button>
+              تسجيل دخول
+            </Button>
+            </RouteLink>
             <IconButton
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"
