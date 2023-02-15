@@ -109,8 +109,8 @@ function LogIn() {
   return (
     <>
       <Container
-        bg={"gray.100"}
-        height={"100vh"}
+       
+        height={"80vh"}
         maxW={"4xl"}
         display="flex"
         justifyContent={"center"}
@@ -124,7 +124,7 @@ function LogIn() {
            
 
 
-          <Card w={"100%"} h={"100%"}  bg="#23acff">
+          <Card w={"100%"} h={"100%"}  bg="#39505F">
          <CardHeader mb="5">
          <Heading  textAlign={"center"}>تسجيل الدخول</Heading>
          </CardHeader>
@@ -165,8 +165,8 @@ function LogIn() {
     
        
       
-         <Card bg={"#142c65"} w={"100%"} h={"100%"} display={"flex"} flexDir="column" align="center"  >
-           <CardBody pos={"absolute"}  bottom="50%" >
+         <Card bg={"#001F33"} w={"100%"} h={"100%"} display={"flex"} flexDir="column" align="center"  >
+           <CardBody pos={"absolute"}  bottom="40%" >
             <SimpleGrid spacingY={3}  >
              <Text textAlign={"center"} color="white">
               ليس لديك حساب ؟ 
@@ -192,7 +192,7 @@ function LogIn() {
         {/* بداية تسجيل جديد */}
         <SimpleGrid width={"100%"} h="md" columns={2} pos="absolute" display={ showCard ? "flex":"none"} alignItems="center" className="Signup"  >
 
-        <Card bg={"#142c65"} w={"100%"} h={"100%"} display={"flex"} flexDir="column" align="center" pos={"relative"} >
+        <Card bg={"#001F33"} w={"100%"} h={"100%"} display={"flex"} flexDir="column" align="center" pos={"relative"} >
            <CardBody pos={"absolute"}  bottom="50%">
             <SimpleGrid spacingY={3} >
              <Text textAlign={"center"} color="white">
@@ -210,9 +210,9 @@ function LogIn() {
            </CardBody>
          </Card>
          
-         <Card w={"100%"} h={"100%"} bg="#23acff">
+         <Card w={"100%"} h={"100%"} bg="#39505F">
          <CardHeader>
-         <Heading textAlign={"center"}>تسجيل جديد</Heading>
+         <Heading color='white' textAlign={"center"}>تسجيل جديد</Heading>
          </CardHeader>
            <CardBody>
              <SimpleGrid spacingY={2}  >
