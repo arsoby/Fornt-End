@@ -25,7 +25,7 @@ import {
     InputRightElement
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
-
+import axios from 'axios';
 import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
@@ -96,13 +96,14 @@ function Nav() {
     <chakra.header
       ref={ref}
       shadow={y > height ? "sm" : undefined}
+      boxShadow={"1px 1px 5px 0px lightgrey"}
+      zIndex={1}
       transition="box-shadow 0.2s"
       bg={bg}
       borderTopColor="brand.400"
       w="full"
       pos={"relative"}
       overflowY="hidden"
-      borderBottomWidth={2}
       // color="gray.200"
       _dark={{ color: "gray.900" }}
       id="header"
@@ -132,7 +133,7 @@ function Nav() {
                 display="inline-flex"
                 alignItems="center"
                 fontSize="md"
-                _hover={{ color: cl }}
+                _hover={{ color: cl, backgroundColor:"white"}}
                 _focus={{ boxShadow: "none" }}>
                   الصفحة الرئيسية
               </Button>
@@ -144,7 +145,7 @@ function Nav() {
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
-                  _hover={{ color: cl }}
+                  _hover={{ color: cl, backgroundColor:"white"}}
                   _focus={{ boxShadow: "none" }}>
                     جميع الشركات
                 </Button>
@@ -156,7 +157,7 @@ function Nav() {
                 display="inline-flex"
                 alignItems="center"
                 fontSize="md"
-                _hover={{ color: cl }}
+                _hover={{ color: cl, backgroundColor:"white"}}
                 _focus={{ boxShadow: "none" }}>
                     الحاسبة
               </Button>
@@ -169,19 +170,15 @@ function Nav() {
               <InputRightElement pointerEvents="none" >
                 <AiOutlineSearch />
               </InputRightElement>
-              <Input bg={'white'} color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
+              <Input bg={"white"} color='black' type="tel" placeholder="بحث..." mr={"10px"}/>
             </InputGroup>
             
-            <IconButton
-              size="md"
-              fontSize="lg"
-              aria-label={`Switch to ${text} mode`}
-              variant="ghost"
-              color="current"
-              ml={{ base: "0", md: "3" }}
-              onClick={toggleMode}
-              icon={<SwitchIcon />}
-            />
+
+            <RouteLink to={"/login"}>
+            <Button mr={"2"} color={cl}>
+              تسجيل دخول
+            </Button>
+            </RouteLink>
             <IconButton
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"
