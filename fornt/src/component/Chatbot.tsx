@@ -72,7 +72,7 @@ function Chatbot() {
         <DrawerContent>
           <DrawerCloseButton />
           
-          <DrawerHeader bg='blue.300' textAlign='center'>مرحبا ماذا تريد ان تعرف </DrawerHeader>
+          <DrawerHeader bg='#39505F'color={'white'} textAlign='center'>مرحبا ماذا تريد ان تعرف </DrawerHeader>
 
           <DrawerBody >
           <AiFillRobot  size={50}/>
@@ -92,7 +92,7 @@ function Chatbot() {
           
           </DrawerBody>
 
-          <DrawerFooter bg="#d4d0d0">
+          <DrawerFooter bg="#001F33">
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               خروج
             </Button>

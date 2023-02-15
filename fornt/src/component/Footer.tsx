@@ -77,19 +77,19 @@ import {
   function Footer() {
     return (
       <Box
-        bg={useColorModeValue("#d4d0d0", "#d4d0d0")}
-        color={useColorModeValue("ligth", "ligth")}
+        bg={useColorModeValue("#001F33", "#d4d0d0")}
+        color={useColorModeValue("white", "whiteAlpha")}
         mt={100}
       >
-        <Container as={Stack} maxW={"6xl"} py={10} bg="#d4d0d0">
+        <Container as={Stack} maxW={"6xl"} py={10} bg="#001F33">
           <SimpleGrid
             templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
-            spacing={8} bg="#d4d0d0"
+            spacing={8} bg="#001F33"
           >
-            <Stack spacing={6} bg="#d4d0d0">
+            <Stack spacing={6} bg="#001F33">
               
              
-              <Stack direction={"row"} spacing={6} bg="#d4d0d0">
+              <Stack direction={"row"} spacing={6} bg="#001F33">
                 <SocialButton label={"Twitter"} href={"https://twitter.com/"}>
                   <FaTwitter />
                 </SocialButton>
@@ -101,20 +101,20 @@ import {
                 </SocialButton>
               </Stack>
             </Stack>
-            <Stack bg="#d4d0d0" align={"flex-start"}>
-              <Text fontSize={25} bg="#d4d0d0">Company</Text>
+            <Stack bg="#001F33" align={"flex-start"}>
+              <Text fontSize={25} bg="#001F33">Company</Text>
               <Link href={"#"}>About us</Link>
               <Link href={"#"}>Contact us</Link>
              
             </Stack>
-            <Stack bg="#d4d0d0" align={"flex-start"}>
-              <Text fontSize={25} bg="#d4d0d0">Support</Text>
+            <Stack bg="#001F33" align={"flex-start"}>
+              <Text fontSize={25} bg="#001F33">Support</Text>
               <Link href={"#"}>Help Center</Link>
               <Link href={"#"}>Terms of Service</Link>
            
             </Stack>
-            <Stack align={"flex-start"}bg='#d4d0d0'>
-              <Text fontSize={25} bg="#d4d0d0" >Stay up to date</Text>
+            <Stack align={"flex-start"}bg='#001F33'>
+              <Text fontSize={25} bg="#001F33" >Stay up to date</Text>
               <Stack direction={"row"} >
                 <Input
                   placeholder={"Your email address"}
