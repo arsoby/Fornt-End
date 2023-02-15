@@ -15,14 +15,13 @@ function Routes() {
   return (
   <>
   <Nav/>
-  <Chatbot/>
+
 <Routess>
         <Route  path='/' element={<Home/>}></Route>
         <Route  path='/companies' element={<Companies/>}></Route>
         <Route  path='/calculator' element={<Calculator/>}></Route>
 
     </Routess>
-    
     <footer>
     <Footer/>
     </footer>

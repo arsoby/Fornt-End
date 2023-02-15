@@ -73,6 +73,7 @@ function Calculator() {
           <Button  bg='green' mt={5}onClick={()=>calculat1()}>احسب</Button>
           <Text mt={8} bg='green'>{total}</Text>
         </Box>
+        
       </Flex>
     </div>
   );

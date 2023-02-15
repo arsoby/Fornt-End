@@ -14,6 +14,7 @@ import {
   import { ReactNode } from "react";
   import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
   import { BiMailSend } from "react-icons/bi";
+import Chatbot from "./Chatbot";
   
   const Logo = (props: any) => {
     return (
@@ -76,6 +77,9 @@ import {
   };
   function Footer() {
     return (
+      <>
+        <Chatbot/>
+
       <Box
         bg={useColorModeValue("#001F33", "#d4d0d0")}
         color={useColorModeValue("white", "whiteAlpha")}
@@ -138,6 +142,7 @@ import {
           </SimpleGrid>
         </Container>
       </Box>
+      </>
     );
   }
   

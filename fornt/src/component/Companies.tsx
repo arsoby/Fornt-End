@@ -17,7 +17,7 @@ function Companies() {
   return (
     <>
 
-    <Box ml={"10%"} mr={"10%"}>
+    <Box ml={"10%"} mr={"10%"} >
         <br></br>
         <Heading size='lg'>جميع الشركات</Heading>
         <br></br>
@@ -29,6 +29,7 @@ function Companies() {
             padding={"1vh"}
             variant='outline'
             bg={'#193547'}
+            mt={3}
             >
             
         <Image
@@ -42,20 +43,20 @@ function Companies() {
                     <HStack gap={"19vh"}>
                         <Heading color={'white'} size='md'>{item.nameOfCompany}</Heading>
 
-                    <Text color={'white'} py='2'>
+                    <Text color={'white'} >
                     {item.num}
                     </Text>
-                    <Text color={'white'} py='2'>
+                    <Text color={'white'} >
                     {item.price} $
                     </Text>
-                    <Text color={'white'} py='2'>
+                    <Text color={'white'} >
                     {item.ishalal}
                     </Text>
                     </HStack>
                 </CardBody>
 
                 <CardFooter>
-                    <Button variant='solid' colorScheme='blue'>
+                    <Button  variant='solid' colorScheme='blue'>
                         للمزيد
                     </Button>
                 </CardFooter>
