@@ -16,6 +16,7 @@ function Routes() {
   return (
   <>
   <Nav/>
+  <Chatbot/>
 <Routess>
         <Route  path='/' element={<Home/>}></Route>
         <Route  path='/companies' element={<Companies/>}></Route>
@@ -23,8 +24,11 @@ function Routes() {
         <Route  path='/calculator' element={<Calculator/>}></Route>
 
     </Routess>
-    <Chatbot/>
+    
+    <footer>
     <Footer/>
+    </footer>
+   
   </>
   )
 }

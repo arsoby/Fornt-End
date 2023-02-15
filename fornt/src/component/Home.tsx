@@ -71,8 +71,8 @@ function Home() {
             <Heading>الصفحة الرئيسية</Heading>
             <br></br>
             {/* شريط متحرك للأسهم الأكثر بحثاً */}
-            <Marquee pauseOnHover={true} className={"marquee"} speed={50}>
-              <SimpleGrid display={"flex"} justifyContent={"space-between"} gap={16} p={"2"}>
+            <Marquee pauseOnHover={true} className={"marquee"} speed={60} >
+              <SimpleGrid display={"flex"} justifyContent={"space-between"} gap={16} p={"2"} bg='#001F33'color={'white'}>
                 <Link to={''}>
                   <Text>Microsoft</Text>
                 </Link>
@@ -214,6 +214,7 @@ function Home() {
           {/* ملخص السوق */}
 
         </Box>
+        
     </Box>
   )
 }

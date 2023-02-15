@@ -37,17 +37,18 @@ function Calculator() {
           textAlign="center"
           width={400}
           h={300}
-          bg="blue.100"
+          bg="#39505F"
           rounded="xl"
           shadow="xl"
           p={10}
+          color='white'
         >
           <Heading fontSize="2xl"> حاسبه التطهير </Heading>
 
-          <Input mt={5} placeholder="ادخل  مقدار الربح " onChange={e =>{setNumber2(e.target.value)}}></Input>
+          <Input mt={5} color='white' placeholder="ادخل  مقدار الربح " onChange={e =>{setNumber2(e.target.value)}}></Input>
           <Input mt={5} placeholder=" ادخل نسبه التطهير" onChange={e =>{setNumber3(e.target.value)}}></Input>
 
-          <Button mt={5} onClick={()=>calculat2()}>احسب</Button>
+          <Button mt={5} bg='green' onClick={()=>calculat2()}>احسب</Button>
           <Text mt={5} bg='green'>{total2}</Text>
 
         </Box>
@@ -59,16 +60,17 @@ function Calculator() {
           textAlign="center"
           width={400}
           h={300}
-          bg="blue.100"
+          bg="#39505F"
           rounded="xl"
           shadow="xl"
           p={10}
+          color='white'
         >
           <Heading fontSize="2xl"> حاسبه الزكاه </Heading>
 
           <Input mt={5} placeholder="ادخل المبلغ" onChange={e =>{setNumber(e.target.value)}}></Input>
 
-          <Button mt={5}onClick={()=>calculat1()}>احسب</Button>
+          <Button  bg='green' mt={5}onClick={()=>calculat1()}>احسب</Button>
           <Text mt={8} bg='green'>{total}</Text>
         </Box>
       </Flex>
