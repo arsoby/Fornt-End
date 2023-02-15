@@ -1,5 +1,6 @@
 import { Box, Card, Image, chakra, Stack, CardBody, Heading, Text, CardFooter, Button, HStack } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import MicosoftLogo from './../assets/microsoft.png'
 import axios from 'axios'
 
@@ -56,9 +57,11 @@ function Companies() {
                 </CardBody>
 
                 <CardFooter>
-                    <Button  variant='solid' colorScheme='blue'>
+                    <Link to={'/company'}>
+                    <Button variant='solid' colorScheme='blue'>
                         للمزيد
                     </Button>
+                    </Link>
                 </CardFooter>
             </HStack>
         </Card>

@@ -3,7 +3,6 @@ import './App.css'
 import Nav from './component/Nav'
 import Routes from './component/Routes'
 
-
 function App() {
   
 
