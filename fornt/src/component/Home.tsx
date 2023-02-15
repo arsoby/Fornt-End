@@ -14,6 +14,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler
 } from "chart.js";
 
 import { Bar, Line } from "react-chartjs-2";
@@ -25,11 +26,15 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 );
 
-function Home() {
+import { faker } from '@faker-js/faker';
 
+function Home() {
+  
+  const labels = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "01:00"];
 
   const [chartData, setChartData] = React.useState<any>({
     datasets: [],
@@ -40,18 +45,37 @@ function Home() {
 
   React.useEffect(() => {
     setChartData({
-      labels: ["John", "Kevin", "Geroge", "Micheal", "Oreo"],
+      labels: labels,
       datasets: [
         {
-          label: "",
-          data: [1200, 550, 340, 1200, 7200],
-          borderColor: "rgb(53, 162, 235)",
-          backgroundColor: "rgba(53, 162, 235, 0.4)",
+          label: "مؤشر الاسهم",
+          // data: labels.map(() => faker.datatype.number({ min: 0, max: 10000 })),
+          data: [2855, 2612, 892, 2005, 5626, 6601, 2848],
+          borderColor: "rgba(45, 69, 85, 0.9)",
+          backgroundColor: "rgba(45, 69, 85, 0.9)",
+          fill: {
+            target: "origin", // 3. Set the fill options
+            above: "rgba(45, 69, 85, 0.9)"
+          },
         },
       ],
     });
     setChartOptions({
       responsive: true,
+      scales: {
+        y: {
+          title: {
+            display: true,
+            text: 'المؤشر'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'الوقت'
+          }
+        }
+      },
       plugins: {
         legend: {
           position: "top",
