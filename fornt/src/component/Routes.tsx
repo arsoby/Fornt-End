@@ -6,6 +6,7 @@ import Companies from './Companies'
 import Company from './Company'
 import Footer from './Footer'
 import Home from './Home'
+import LogIn from './LogIn'
 import Nav from './Nav'
 
 
@@ -22,7 +23,7 @@ function Routes() {
         <Route  path='/companies' element={<Companies/>}></Route>
         <Route  path='/company' element={<Company/>}></Route>
         <Route  path='/calculator' element={<Calculator/>}></Route>
-
+        <Route  path='/login' element={<LogIn/>}></Route>
     </Routess>
     
     <footer>
