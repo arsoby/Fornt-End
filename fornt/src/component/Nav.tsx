@@ -132,7 +132,7 @@ function Nav() {
                 display="inline-flex"
                 alignItems="center"
                 fontSize="md"
-                _hover={{ color: cl }}
+                _hover={{ color: cl, backgroundColor:"white"}}
                 _focus={{ boxShadow: "none" }}>
                   الصفحة الرئيسية
               </Button>
@@ -144,7 +144,7 @@ function Nav() {
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
-                  _hover={{ color: cl }}
+                  _hover={{ color: cl, backgroundColor:"white"}}
                   _focus={{ boxShadow: "none" }}>
                     جميع الشركات
                 </Button>
@@ -156,7 +156,7 @@ function Nav() {
                 display="inline-flex"
                 alignItems="center"
                 fontSize="md"
-                _hover={{ color: cl }}
+                _hover={{ color: cl, backgroundColor:"white"}}
                 _focus={{ boxShadow: "none" }}>
                     الحاسبة
               </Button>
@@ -169,12 +169,12 @@ function Nav() {
               <InputRightElement pointerEvents="none" >
                 <AiOutlineSearch />
               </InputRightElement>
-              <Input color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
+              <Input bg={"white"} color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
             </InputGroup>
             
 
             <RouteLink to={"/login"}>
-            <Button mr={"2"}>
+            <Button mr={"2"} color={cl}>
               تسجيل دخول
             </Button>
             </RouteLink>
