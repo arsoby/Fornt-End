@@ -34,9 +34,9 @@ import { Link as RouteLink } from 'react-router-dom'
 function Nav() {
 
     const { toggleColorMode: toggleMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
+  const text = useColorModeValue("fffff", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const bg = useColorModeValue("white", "gray.800");
+  const bg = useColorModeValue("#39505F", "gray.800");
   const ref = React.useRef<HTMLDivElement | null>(null);
   const [y, setY] = React.useState(0);
   const height = ref.current ? ref.current.getBoundingClientRect() : 0;
@@ -70,15 +70,14 @@ function Nav() {
         onClick={mobileNav.onClose}
       />
       <Link href="#home">
-      <Button w="full" variant="ghost">
+      <Button w="full" variant="light">
         الصفحة الرئيسية
       </Button>
       </Link>
       <Link href="#about">
-      <Button
+      <Button 
         w="full"
-        variant="ghost"
-        colorScheme="brand"
+      color="light"
         leftIcon={<AiOutlineInbox />}>
         جميع الشركات
       </Button>
@@ -127,7 +126,7 @@ function Nav() {
             <RouteLink to={"/"}>
               <Button
                 bg={bg}
-                color="gray.500"
+                color="white"
                 display="inline-flex"
                 alignItems="center"
                 fontSize="md"
@@ -139,7 +138,7 @@ function Nav() {
               <RouteLink to="/companies">
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="white"
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
@@ -151,7 +150,7 @@ function Nav() {
               <RouteLink to={"/calculator"}>
               <Button
                 bg={bg}
-                color="gray.500"
+                color="white"
                 display="inline-flex"
                 alignItems="center"
                 fontSize="md"
@@ -168,7 +167,7 @@ function Nav() {
               <InputRightElement pointerEvents="none" >
                 <AiOutlineSearch />
               </InputRightElement>
-              <Input type="tel" placeholder="بحث..." mr={"10px"}/>
+              <Input color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
             </InputGroup>
             
             <IconButton
@@ -185,7 +184,7 @@ function Nav() {
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"
               fontSize="20px"
-              color="gray.800"
+              color="white"
               _dark={{ color: "inherit" }}
               variant="ghost"
               icon={<AiOutlineMenu />}
