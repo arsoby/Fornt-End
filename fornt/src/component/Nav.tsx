@@ -25,7 +25,7 @@ import {
     InputRightElement
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
-
+import axios from 'axios';
 import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
@@ -170,7 +170,7 @@ function Nav() {
               <InputRightElement pointerEvents="none" >
                 <AiOutlineSearch />
               </InputRightElement>
-              <Input bg={"white"} color='white' type="tel" placeholder="بحث..." mr={"10px"}/>
+              <Input bg={"white"} color='black' type="tel" placeholder="بحث..." mr={"10px"}/>
             </InputGroup>
             
 
