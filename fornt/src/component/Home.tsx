@@ -100,9 +100,33 @@ function Home() {
 
   return (
     <Box>
+      <Box>
+        <Box pos={"absolute"} zIndex={"1"} color={"white"} width={"100%"} textAlign={"center"} height={"20vh"} top={"25vh"}>
+          <Box display={"flex"} justifyContent={"center"} gap={"2"}>
+            <Heading fontFamily={"Cairo"}>مرحباً بك في موقع</Heading>
+            <Heading color={"gray.300"} fontFamily={"Cairo"}>أعرف سهمك</Heading>
+          </Box>
+          <br></br>
+          <Box>
+            <Text fontSize={"x-large"}>نساعدك على معرفة شرعية سهمك</Text>
+          </Box>
+        </Box>
+        <ul className="background">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </Box>
       <br></br>
       <Box ml={"2vh"} mr={"2vh"}>
-        <Heading>الصفحة الرئيسية</Heading>
+        
         <br></br>
         {/* شريط متحرك للأسهم الأكثر بحثاً */}
       <Marque/>
