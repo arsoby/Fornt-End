@@ -51,9 +51,7 @@ function LogIn() {
         axios.get(api).then(res=>{
           setAllData(res.data)
     console.log(res.data);
-      
         })  
-    
     },[])
 
     // Post Method 

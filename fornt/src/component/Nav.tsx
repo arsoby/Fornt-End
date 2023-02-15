@@ -30,7 +30,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { Link as RouteLink } from 'react-router-dom'
+import { Link as RouteLink, useNavigate } from 'react-router-dom'
 import Chatbot from './Chatbot';
 function Nav() {
 
@@ -90,7 +90,48 @@ function Nav() {
       </Link>
     </VStack>
   );
+   // Get Method 
+   const navigate = useNavigate()
+   const api="https://63e226a5ad0093bf29c8eb0d.mockapi.io/lab"
 
+   React.useEffect(() => {
+    axios.get(api).then(res=>{
+      setAllData(res.data)
+console.log(res.data);
+    })  
+},[])
+
+  let [allData, setAllData] = React.useState <any>();
+  let [data, setData] = React.useState <any>();
+  let [NumOfC, setNumOfC] = React.useState <any>("");
+
+   const Check = (item:any) => {
+      NumOfC=item.target.value.toUpperCase();
+    // setNumOfC(item.target.value.toUpperCase());
+    // setNumOfC(NumOfC.toUpperCase())
+        console.log(NumOfC);
+
+      let id = 0,
+        correct = false;
+      for (let i = 0; i < allData.length; i++) {
+        let st = allData[i].num
+        if (st == NumOfC) {
+          correct = true;
+          id = i;
+          setData(allData[i]);
+          break; }
+        }
+        if (correct) {
+          // alert(`${allData[id].id} `)
+          navigate(`/company/${allData[id].id}`)
+
+        }
+        else{
+          
+          }
+        }
+    
+  
   return (
     <>
     <chakra.header
@@ -169,7 +210,9 @@ function Nav() {
               <InputRightElement pointerEvents="none" >
                 <AiOutlineSearch />
               </InputRightElement>
-              <Input bg={"white"} color='black' type="tel" placeholder="بحث..." mr={"10px"}/>
+              <Input bg={"white"} color='black' type="tel" placeholder="بحث..." mr={"10px"} 
+                onChange={Check}
+              />
             </InputGroup>
             
 
