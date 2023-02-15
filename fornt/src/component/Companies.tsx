@@ -3,7 +3,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MicosoftLogo from './../assets/microsoft.png'
 import axios from 'axios'
-import Marque from './Marque'
 
 function Companies() {
     const [data,setData]=React. useState<any[]>([]);
@@ -16,10 +15,29 @@ function Companies() {
         })
     },[])
 
+    const ishalalColor = (item:string) => {
+
+        let colorState = "white";
+
+        if(item == "متوافقة مع الشريعة") {
+
+            colorState = "green.400";
+
+        }
+
+        if(item == "غير متوافقة مع الشريعة") {
+
+            colorState = "red.400";
+
+        }
+
+        return colorState;
+
+    }
+
   return (
     <>
-    <br></br>
-<Marque/>
+
     <Box ml={"10%"} mr={"10%"} >
         <br></br>
         <Heading size='lg' fontFamily={"Cairo"}>جميع الشركات</Heading>
@@ -51,7 +69,7 @@ function Companies() {
                     <Text color={'white'} fontWeight={"bold"}>
                     {item.price} $
                     </Text>
-                    <Text color={'white'} fontWeight={"bold"}>
+                    <Text color={ishalalColor(item.ishalal)} fontWeight={"bold"}>
                     {item.ishalal}
                     </Text>
                     <Link to={'/company'}>
