@@ -96,13 +96,14 @@ function Nav() {
     <chakra.header
       ref={ref}
       shadow={y > height ? "sm" : undefined}
+      boxShadow={"1px 1px 5px 0px lightgrey"}
+      zIndex={1}
       transition="box-shadow 0.2s"
       bg={bg}
       borderTopColor="brand.400"
       w="full"
       pos={"relative"}
       overflowY="hidden"
-      borderBottomWidth={2}
       // color="gray.200"
       _dark={{ color: "gray.900" }}
       id="header"

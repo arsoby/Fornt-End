@@ -1,4 +1,4 @@
-import { Box, Card, Image, chakra, Stack, CardBody, Heading, Text, CardFooter, Button, HStack } from '@chakra-ui/react'
+import { Box, Card, Image, chakra, Stack, CardBody, Heading, Text, CardFooter, Button, HStack, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import MicosoftLogo from './../assets/microsoft.png'
@@ -20,7 +20,7 @@ function Companies() {
 
     <Box ml={"10%"} mr={"10%"} >
         <br></br>
-        <Heading size='lg'>جميع الشركات</Heading>
+        <Heading size='lg' fontFamily={"Cairo"}>جميع الشركات</Heading>
         <br></br>
         {data.map((item:any)=>
         <li key={item.id}>
@@ -39,31 +39,26 @@ function Companies() {
             src={item.img}
             alt='Microsoft'/>
             
-            <HStack gap={"19vh"}>
-                <CardBody>
-                    <HStack gap={"19vh"}>
-                        <Heading color={'white'} size='md'>{item.nameOfCompany}</Heading>
+            <CardBody>
+                <SimpleGrid columns={5} spacing={"10"} alignItems={"center"}>
+                    <Heading color={'white'} size="lg">{item.nameOfCompany}</Heading>
 
-                    <Text color={'white'} >
+                    <Text color={'white'} fontWeight={"bold"}>
                     {item.num}
                     </Text>
-                    <Text color={'white'} >
+                    <Text color={'white'} fontWeight={"bold"}>
                     {item.price} $
                     </Text>
-                    <Text color={'white'} >
+                    <Text color={'white'} fontWeight={"bold"}>
                     {item.ishalal}
                     </Text>
-                    </HStack>
-                </CardBody>
-
-                <CardFooter>
                     <Link to={'/company'}>
-                    <Button variant='solid' colorScheme='blue'>
-                        للمزيد
-                    </Button>
-                    </Link>
-                </CardFooter>
-            </HStack>
+                <Button variant='solid' colorScheme='blue'>
+                    للمزيد
+                </Button>
+                </Link>
+                </SimpleGrid>
+            </CardBody>
         </Card>
         </li>
         )}

@@ -1,4 +1,4 @@
-import { Box, chakra, Heading, SimpleGrid, Image, Text } from '@chakra-ui/react'
+import { Box, chakra, Heading, SimpleGrid, Image, Text, StatGroup, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, Divider } from '@chakra-ui/react'
 import React from 'react'
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
@@ -33,15 +33,15 @@ ChartJS.register(
 import { faker } from '@faker-js/faker';
 
 function Home() {
-  
+
   const labels = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "01:00"];
 
   const [chartData, setChartData] = React.useState<any>({
     datasets: [],
   });
- 
+
   const [chartOptions, setChartOptions] = React.useState({});
-  
+
 
   React.useEffect(() => {
     setChartData({
@@ -87,158 +87,199 @@ function Home() {
       },
     });
   }, []);
-    
+
   return (
     <Box>
-        <br></br>
-        <Box ml={"2vh"} mr={"2vh"}>
-            <Heading>الصفحة الرئيسية</Heading>
-            <br></br>
-            {/* شريط متحرك للأسهم الأكثر بحثاً */}
-            <Marquee pauseOnHover={true} className={"marquee"} speed={60} >
-              <SimpleGrid display={"flex"} justifyContent={"space-between"} gap={16} p={"2"} bg='#001F33'color={'white'}>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-                <Link to={''}>
-                  <Text>Microsoft</Text>
-                </Link>
-              </SimpleGrid>
-          </Marquee>
-          {/* شريط متحرك للأسهم الأكثر بحثاً */}
-
-          <br></br>
-          {/* الشركات الأكثر بحثاً */}
-          <Box>
-            <chakra.h2 textAlign={"center"} fontSize={"3xl"}>الشركات الأكثر بحثاً</chakra.h2>
-
-            <Box bgColor={"#001F33"}>
-              <SimpleGrid columns={6} gap={"16"} p={"6"}>
-                <Link to={''}>
-                  <Image src={Microsoft}></Image>
-                </Link>
-                <Link to={''}>
-                  <Image src={Microsoft}></Image>
-                </Link>
-                <Link to={''}>
-                  <Image src={Microsoft}></Image>
-                </Link>
-                <Link to={''}>
-                  <Image src={Microsoft}></Image>
-                </Link>
-                <Link to={''}>
-                  <Image src={Microsoft}></Image>
-                </Link>
-                <Link to={''}>
-                  <Image src={Microsoft}></Image>
-                </Link>
-              </SimpleGrid>
-            </Box>
+      <Box>
+        <Box pos={"absolute"} zIndex={"1"} color={"white"} width={"100%"} textAlign={"center"} height={"20vh"} top={"25vh"}>
+          <Box display={"flex"} justifyContent={"center"} gap={"2"}>
+            <Heading fontFamily={"Cairo"}>مرحباً بك في موقع</Heading>
+            <Heading color={"gray.300"} fontFamily={"Cairo"}>أعرف سهمك</Heading>
           </Box>
-          {/* الشركات الأكثر بحثاً */}
           <br></br>
-          {/* ملخص السوق */}
           <Box>
-            <chakra.h2 fontSize={"3xl"} fontWeight={"bold"}>ملخص السوق</chakra.h2>
-
-            <Box>
-              <SimpleGrid columns={8} bg={"#001F33"} p={"14"} textAlign={"center"} fontSize={"x-large"} fontWeight={"bold"} color={"white"}>
-                <Box color={"green.500"}>
-                  <Text>الأكثر ارتفاع</Text>
-                </Box>
-                  <Box>
-                    <SimpleGrid>
-                      <Text>Microsoft</Text>
-                      <SimpleGrid columns={2} color={"green.500"} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-                        <Text>0.30%</Text><FaArrowUp/>
-                      </SimpleGrid>
-                    </SimpleGrid>
-                </Box>
-                  <Box>
-                    <SimpleGrid>
-                      <Text>Microsoft</Text>
-                      <SimpleGrid columns={2} color={"green.500"} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-                        <Text>0.30%</Text><FaArrowUp/>
-                      </SimpleGrid>
-                    </SimpleGrid>
-                </Box>
-                <Box borderLeft={"1px"}>
-                    <SimpleGrid>
-                      <Text>Microsoft</Text>
-                      <SimpleGrid columns={2} color={"green.500"} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-                        <Text>0.30%</Text><FaArrowUp/>
-                      </SimpleGrid>
-                    </SimpleGrid>
-                </Box>
-                <Box color={"red.500"}>
-                  <Text>الأكثر انخفاضاً</Text>
-                </Box>
-                <Box>
-                    <SimpleGrid>
-                      <Text>Microsoft</Text>
-                      <SimpleGrid columns={2} color={"red.500"} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-                        <Text>0.15%</Text><FaArrowDown/>
-                      </SimpleGrid>
-                    </SimpleGrid>
-                </Box>
-                <Box>
-                    <SimpleGrid>
-                      <Text>Microsoft</Text>
-                      <SimpleGrid columns={2} color={"red.500"} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-                        <Text>0.15%</Text><FaArrowDown/>
-                      </SimpleGrid>
-                    </SimpleGrid>
-                </Box>
-                <Box>
-                    <SimpleGrid>
-                      <Text>Microsoft</Text>
-                      <SimpleGrid columns={2} color={"red.500"} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-                        <Text>0.15%</Text><FaArrowDown/>
-                      </SimpleGrid>
-                    </SimpleGrid>
-                </Box>
-                </SimpleGrid>              
-            </Box>
-            <Box h={630} w={"100%"}>
-              <Box h={"100%"}>
-                <Line options={chartOptions} data={chartData}  />
-              </Box>
-            </Box>
+            <Text fontSize={"x-large"}>نساعدك على معرفة شرعية سهمك</Text>
           </Box>
-          {/* ملخص السوق */}
-
         </Box>
-        
+        <ul className="background">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </Box>
+      <br></br>
+      <Box ml={"2vh"} mr={"2vh"}>
+        {/* شريط متحرك للأسهم الأكثر بحثاً */}
+        <Marquee pauseOnHover={true} className={"marquee"} speed={60} >
+          <SimpleGrid display={"flex"} justifyContent={"space-between"} gap={16} p={"2"} bg='#001F33' color={'white'}>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+            <Link to={''}>
+              <Text>Microsoft</Text>
+            </Link>
+          </SimpleGrid>
+        </Marquee>
+        {/* شريط متحرك للأسهم الأكثر بحثاً */}
+
+        <br></br>
+        {/* الشركات الأكثر بحثاً */}
+        <Box>
+          <chakra.h2 textAlign={"center"} fontSize={"3xl"}>الشركات الأكثر بحثاً</chakra.h2>
+
+          <Box bgColor={"#001F33"}>
+            <SimpleGrid columns={6} gap={"16"} p={"6"}>
+              <Link to={''}>
+                <Image src={Microsoft}></Image>
+              </Link>
+              <Link to={''}>
+                <Image src={Microsoft}></Image>
+              </Link>
+              <Link to={''}>
+                <Image src={Microsoft}></Image>
+              </Link>
+              <Link to={''}>
+                <Image src={Microsoft}></Image>
+              </Link>
+              <Link to={''}>
+                <Image src={Microsoft}></Image>
+              </Link>
+              <Link to={''}>
+                <Image src={Microsoft}></Image>
+              </Link>
+            </SimpleGrid>
+          </Box>
+        </Box>
+        {/* الشركات الأكثر بحثاً */}
+        <br></br>
+        {/* ملخص السوق */}
+        <Box>
+          <chakra.h2 fontSize={"3xl"} fontWeight={"bold"}>ملخص السوق</chakra.h2>
+
+          <Box>
+            <SimpleGrid columns={9} bg={"#001F33"} p={"14"} textAlign={"center"} fontSize={"x-large"} fontWeight={"bold"} color={"white"}>
+              <Box color={"green.300"}>
+                <Text>الأكثر ارتفاع</Text>
+              </Box>
+              <Box>
+                <StatGroup>
+                  <Stat>
+                    <StatNumber>Microsoft</StatNumber>
+                    <StatHelpText fontSize={"large"} color={"green.300"}>
+                      <StatArrow type='increase' />
+                      23.36%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </Box>
+              <Box>
+                <StatGroup>
+                  <Stat>
+                    <StatNumber>Microsoft</StatNumber>
+                    <StatHelpText fontSize={"large"} color={"green.300"}>
+                      <StatArrow type='increase' />
+                      23.36%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </Box>
+              <Box>
+                <StatGroup>
+                  <Stat>
+                    <StatNumber>Microsoft</StatNumber>
+                    <StatHelpText fontSize={"large"} color={"green.300"}>
+                      <StatArrow type='increase' />
+                      23.36%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </Box>
+              <Divider orientation='vertical' margin={"auto"} border={"2px"} />
+              <Box color={"#FF0D4E"}>
+                <Text>الأكثر انخفاضاً</Text>
+              </Box>
+              <Box>
+                <StatGroup>
+                  <Stat>
+                    <StatNumber>Microsoft</StatNumber>
+                    <StatHelpText fontSize={"large"} color={"#FF0D4E"}>
+                      <StatArrow type='decrease' />
+                      9.05%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </Box>
+              <Box>
+                <StatGroup>
+                  <Stat>
+                    <StatNumber>Microsoft</StatNumber>
+                    <StatHelpText fontSize={"large"} color={"#FF0D4E"}>
+                      <StatArrow type='decrease' />
+                      9.05%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </Box>
+              <Box>
+                <StatGroup>
+                  <Stat>
+                    <StatNumber>Microsoft</StatNumber>
+                    <StatHelpText fontSize={"large"} color={"#FF0D4E"}>
+                      <StatArrow type='decrease' />
+                      9.05%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </Box>
+            </SimpleGrid>
+          </Box>
+          <Box h={630} w={"100%"}>
+            <Box h={"100%"}>
+              <Line options={chartOptions} data={chartData} />
+            </Box>
+          </Box>
+        </Box>
+        {/* ملخص السوق */}
+
+      </Box>
+
     </Box>
   )
 }

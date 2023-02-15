@@ -13,7 +13,10 @@ function Company() {
                 <Box>
                     <Heading>Microsoft</Heading>
                     <br></br>
-                    <Badge fontSize={"large"} colorScheme='blue' p={"1"}>MSFT</Badge>
+                    <Box display={"flex"} justifyContent={"space-between"} w={"30%"}>
+                        <Badge fontSize={"large"} colorScheme='blue' p={"1"}>MSFT</Badge>
+                        <Text fontSize={"larger"} fontWeight={"bold"}>تقنيات الحاسوب</Text>
+                    </Box>
                 </Box>
                 <Box>
                     <Image 
