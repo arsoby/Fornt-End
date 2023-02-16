@@ -232,10 +232,11 @@ function LogIn() {
          </CardHeader>
            <CardBody>
              <SimpleGrid spacingY={2}  >
-               <Input bg={"whitesmoke"}   size="md" textAlign={"right"} placeholder="البريد الإلكتروني"
-               onChange={e =>{setEmail(e.target.value)}} />
+             
                <Input bg={"whitesmoke"} size="md" textAlign={"right"} placeholder="اسم المستخدم"
                onChange={e =>{setUserName(e.target.value)}} />
+                 <Input bg={"whitesmoke"}   size="md" textAlign={"right"} placeholder="البريد الإلكتروني"
+               onChange={e =>{setEmail(e.target.value)}} />
                <InputGroup size="md">
                  <Input bg={"whitesmoke"} 
                    pr="1rem"

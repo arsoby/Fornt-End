@@ -203,6 +203,18 @@ console.log(res.data);
                     الحاسبة
               </Button>
               </RouteLink>
+              <RouteLink to={"/Favourites"}>
+              <Button
+                bg={bg}
+                color="white"
+                display="inline-flex"
+                alignItems="center"
+                fontSize="md"
+                _hover={{ color: cl, backgroundColor:"white"}}
+                _focus={{ boxShadow: "none" }}>
+                    قائمة المتابعة
+              </Button>
+              </RouteLink>
             </HStack>
           </Flex>
           <Flex justify="flex-end" align="center" color="gray.400">
