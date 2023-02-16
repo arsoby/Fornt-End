@@ -106,26 +106,26 @@ import Chatbot from "./Chatbot";
               </Stack>
             </Stack>
             <Stack bg="#001F33" align={"flex-start"}>
-              <Text fontSize={25} bg="#001F33">Company</Text>
-              <Link href={"#"}>About us</Link>
-              <Link href={"#"}>Contact us</Link>
+              <Text fontSize={25} bg="#001F33">أعرف سهمك</Text>
+              <Link href={"#"}>من نحن</Link>
+              <Link href={"#"}>تواصل معنا</Link>
              
             </Stack>
             <Stack bg="#001F33" align={"flex-start"}>
-              <Text fontSize={25} bg="#001F33">Support</Text>
-              <Link href={"#"}>Help Center</Link>
-              <Link href={"#"}>Terms of Service</Link>
+              <Text fontSize={25} bg="#001F33">الدعم</Text>
+              <Link href={"#"}>مركز الدعم</Link>
+              <Link href={"#"}>الشروط والاتفاقيات</Link>
            
             </Stack>
             <Stack align={"flex-start"}bg='#001F33'>
-              <Text fontSize={25} bg="#001F33" >Stay up to date</Text>
+              <Text fontSize={25} bg="#001F33" >ابق على الاطلاع</Text>
               <Stack direction={"row"} >
                 <Input
-                  placeholder={"Your email address"}
-                  bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                  placeholder={"بريدك الالكتروني"}
+                  bg={useColorModeValue("whiteAlph.100", "whiteAlpha.100")}
                   border={0}
                   _focus={{
-                    bg: "whiteAlpha.300",
+                    bg: "whiteAlpha.100",
                   }}
                 />
                 <IconButton

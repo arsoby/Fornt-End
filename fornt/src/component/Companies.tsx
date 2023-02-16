@@ -60,7 +60,7 @@ function Companies() {
             alt='Microsoft'/>
             
             <CardBody>
-                <SimpleGrid columns={5} spacing={"10"} alignItems={"center"}>
+                <SimpleGrid columns={6} spacing={"5"} alignItems={"center"}>
                     <Heading color={'white'} size="lg">{item.nameOfCompany}</Heading>
 
                     <Text color={'white'} fontWeight={"bold"}>
@@ -72,6 +72,9 @@ function Companies() {
                     <Text color={ishalalColor(item.ishalal)} fontWeight={"bold"}>
                     {item.ishalal}
                     </Text>
+                    <Button variant='solid' colorScheme='yellow'>
+                        إضافة للمفضلة
+                    </Button>
                     <Link to={`/company/${item.id}`}>
                 <Button variant='solid' colorScheme='blue'>
                     للمزيد

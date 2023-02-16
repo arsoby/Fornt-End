@@ -32,6 +32,7 @@ import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link as RouteLink, useNavigate } from 'react-router-dom'
 import Chatbot from './Chatbot';
+import Logo from "./../assets/logoo.png";
 const reduser =(state:any,action:any)=>{
   if(action.type === 'user logIn')return {user: state.user =  true}
   if(action.type === 'user LogOut')return {user: state.user   = false}}
@@ -175,8 +176,7 @@ console.log(res.data);
           <Flex align="flex-start">
             <Link href="/">
               <HStack>
-                {/* <Logo /> */}
-                {/* <Image src={Logo} w={"64px"} h={"64px"} borderRadius={"50%"}></Image> */}
+                <Image src={Logo} w={"64px"} h={"64px"} borderRadius={"50%"}></Image>
               </HStack>
             </Link>
           </Flex>

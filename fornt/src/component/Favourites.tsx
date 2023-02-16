@@ -63,7 +63,7 @@ function Favourites() {
             alt='Microsoft'/>
             
             <CardBody>
-                <SimpleGrid columns={6} spacing={"10"} alignItems={"center"}>
+                <SimpleGrid columns={6} spacing={"5"} alignItems={"center"}>
                     <Heading color={'white'} size="lg">{item.nameOfCompany}</Heading>
 
                  
