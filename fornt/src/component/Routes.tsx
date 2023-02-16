@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes as Routess, Route } from 'react-router-dom'
+import { Routes as Routess, Route, useParams } from 'react-router-dom'
 import Calculator from './Calculator'
 import Chatbot from './Chatbot'
 import Companies from './Companies'
@@ -12,7 +12,7 @@ import Nav from './Nav'
 
 function Routes() {
 
-
+  
 
   return (
   <>
@@ -21,7 +21,7 @@ function Routes() {
 <Routess>
         <Route  path='/' element={<Home/>}></Route>
         <Route  path='/companies' element={<Companies/>}></Route>
-        <Route  path='/company' element={<Company/>}></Route>
+        <Route  path='/company/:id' element={<Company />}></Route>
         <Route  path='/calculator' element={<Calculator/>}></Route>
         <Route  path='/login' element={<LogIn/>}></Route>
     </Routess>

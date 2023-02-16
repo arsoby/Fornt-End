@@ -134,7 +134,7 @@ function Home() {
         <br></br>
         {/* الشركات الأكثر بحثاً */}
         <Box>
-          <chakra.h2 textAlign={"center"} fontSize={"3xl"}>
+          <chakra.h2 textAlign={"center"} fontFamily={"Cairo"} fontSize={"3xl"}>
             الشركات الأكثر بحثاً
           </chakra.h2>
 
@@ -179,7 +179,7 @@ function Home() {
                     <StatNumber>Microsoft</StatNumber>
                     <StatHelpText fontSize={"large"} color={"green.300"}>
                       <StatArrow type='increase' />
-                      23.36%
+                      15.9%
                     </StatHelpText>
                   </Stat>
                 </StatGroup>
@@ -187,10 +187,10 @@ function Home() {
               <Box>
                 <StatGroup>
                   <Stat>
-                    <StatNumber>Microsoft</StatNumber>
+                    <StatNumber>Tesla</StatNumber>
                     <StatHelpText fontSize={"large"} color={"green.300"}>
                       <StatArrow type='increase' />
-                      23.36%
+                      13.36%
                     </StatHelpText>
                   </Stat>
                 </StatGroup>
@@ -198,10 +198,10 @@ function Home() {
               <Box>
                 <StatGroup>
                   <Stat>
-                    <StatNumber>Microsoft</StatNumber>
+                    <StatNumber>NIO</StatNumber>
                     <StatHelpText fontSize={"large"} color={"green.300"}>
                       <StatArrow type='increase' />
-                      23.36%
+                      10.96%
                     </StatHelpText>
                   </Stat>
                 </StatGroup>
@@ -213,7 +213,7 @@ function Home() {
               <Box>
                 <StatGroup>
                   <Stat>
-                    <StatNumber>Microsoft</StatNumber>
+                    <StatNumber>Alphabet</StatNumber>
                     <StatHelpText fontSize={"large"} color={"#FF0D4E"}>
                       <StatArrow type='decrease' />
                       9.05%
@@ -224,10 +224,10 @@ function Home() {
               <Box>
                 <StatGroup>
                   <Stat>
-                    <StatNumber>Microsoft</StatNumber>
+                    <StatNumber>Alibaba</StatNumber>
                     <StatHelpText fontSize={"large"} color={"#FF0D4E"}>
                       <StatArrow type='decrease' />
-                      9.05%
+                      14.08%
                     </StatHelpText>
                   </Stat>
                 </StatGroup>
@@ -235,10 +235,10 @@ function Home() {
               <Box>
                 <StatGroup>
                   <Stat>
-                    <StatNumber>Microsoft</StatNumber>
+                    <StatNumber>Apple</StatNumber>
                     <StatHelpText fontSize={"large"} color={"#FF0D4E"}>
                       <StatArrow type='decrease' />
-                      9.05%
+                      16.01%
                     </StatHelpText>
                   </Stat>
                 </StatGroup>

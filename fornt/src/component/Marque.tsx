@@ -1,4 +1,4 @@
-import { SimpleGrid, Stack, Divider,Text } from '@chakra-ui/react'
+import { SimpleGrid, Stack, Divider,Text, Stat, StatArrow, StatHelpText, StatNumber } from '@chakra-ui/react'
 import axios from 'axios';
 import React from 'react'
 import Marquee from 'react-fast-marquee'
@@ -14,6 +14,9 @@ function Marque() {
         setData(res.data);
       });
     }, []);
+
+
+    
   return (
     <>
     <br></br>
@@ -33,7 +36,8 @@ function Marque() {
                   <Link to={"/company"}>
                     <Text>
                       {" "}
-                      {item.nameOfCompany} ( {item.price} $ ){" "}
+                      {item.nameOfCompany} ( {item.price} $ )
+                   
                     </Text>
                   </Link>
                 </Stack>

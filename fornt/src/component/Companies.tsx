@@ -72,7 +72,7 @@ function Companies() {
                     <Text color={ishalalColor(item.ishalal)} fontWeight={"bold"}>
                     {item.ishalal}
                     </Text>
-                    <Link to={'/company'}>
+                    <Link to={`/company/${item.id}`}>
                 <Button variant='solid' colorScheme='blue'>
                     للمزيد
                 </Button>
