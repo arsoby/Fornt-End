@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import {
     Box,
     Button,
@@ -32,7 +32,22 @@ import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link as RouteLink, useNavigate } from 'react-router-dom'
 import Chatbot from './Chatbot';
+const reduser =(state:any,action:any)=>{
+  if(action.type === 'user logIn')return {user: state.user =  true}
+  if(action.type === 'user LogOut')return {user: state.user   = false}}
 function Nav() {
+
+  const user=localStorage.getItem("userName")
+//   localStorage.removeItem("userName")
+// console.log(user);
+const removeUser =()=>{
+  localStorage.removeItem("userName")
+  navigate('/login')
+}
+
+
+  const initialState ={user:true};
+  const [state,dispatch]:any= useReducer<any>(reduser,initialState)
 
     const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("fffff", "light");
@@ -228,11 +243,18 @@ console.log(res.data);
               />
             </InputGroup>
             
-
-            <RouteLink to={"/login"}>
-            <Button mr={"2"} color={cl}>
+            {user === null?
+             <RouteLink to={"/login"}> 
+              <Button onClick={()=>dispatch({type:"user logIn"})} mr={"2"} color={cl}>
               تسجيل دخول
-            </Button>
+            </Button></RouteLink>  
+            :    <Button onClick={()=>removeUser()} mr={"2"} color={cl}>
+            تسجيل خروج
+          </Button>}
+      
+        
+            <RouteLink to={"/login"}>
+          
             </RouteLink>
             <IconButton
               display={{ base: "flex", md: "none" }}

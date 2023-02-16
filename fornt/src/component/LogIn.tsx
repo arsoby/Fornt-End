@@ -71,13 +71,17 @@ function LogIn() {
   
           })
           axios.get(api).then(res=>{setAllData(res.data);console.log(allData);
+
           })
-      }else{
+          toggleShowCard()
+      }
+      else{
           alert(` Check Name And Password
           Password must be more than or equal 8 chars
           and user name mor than 3 cahrs`)
       }
     }
+
 
     function forwed() {
       if (email=="" || password=="") {
