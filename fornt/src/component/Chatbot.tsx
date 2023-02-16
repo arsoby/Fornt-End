@@ -39,22 +39,22 @@ function Chatbot() {
 
         case 3:
           // execute case y code block
-          setData("الاكثر الحلال هي مايكروسفت");
+          setData("الشركات المتوافقه مع الشريعة هي 1-Microsoft 2-Tesla 3-Apple 4-Amazon 5-Alphabet");
           break;
 
           case 4:
             // execute case y code block
-            setData("   اخر الاخبار ");
+            setData("  إعلان بشأن الموافقة على إدراج أدوات الدين الحكومية من فئة سبق إدراجها 1444/07/25    16/02/2023 09:47:57 إعلان شركة الكثيري القابضة عن عزمها إصدارالسلسة الأولي من برنامج اصدار صكوك محلية مقومة بالريال السعودي 3008 الكثيري -0.1% (-0.19) 1444/07/25    16/02/2023 09:16:02 إعلان الشركة السعودية لأنابيب الصلب عن النتائج المالية الموحدة السنوية للفترة المنتهية في 31-12-2022 1320 أنابيب السعودية 0.44% (2.21) 1444/07/25    16/02/2023 09:10:57 إعلان بشأن الموافقة على إدراج أدوات الدين الحكومية من فئة سبق إدراجها 1444/07/25    16/02/2023 09:47:57 إعلان شركة الكثيري القابضة عن عزمها إصدارالسلسة الأولي من برنامج اصدار صكوك محلية مقومة بالريال السعودي ");
       
         break;
         case 5:
           // execute case y code block
-          setData("   اخر الاخبار ");
+          setData("   التطهير هو اخراج المساهم أو المتداول في سوق الأسهم لقدر محدد من الارباح التي يجنيها من استثماره في الشركات المختلطة في أسواق الأسهم مقابل ذلك الإيراد المحرم الذي تجنيه الشركة من إرباحها غير التشغيلية – الأخرى – أو اقتراضها لديون بطريقة غير شرعية  ");
     
       break;
       case 6:
         // execute case y code block
-        setData("   اخر الاخبار ");
+        setData("   نحن في موقع اعرف سهمك نساعد على معرفه شرعيه سهمك والوصول الى كافه البيانات التي تريد معرفتها  ");
   
     break;
       default:
@@ -96,7 +96,7 @@ function Chatbot() {
           
           <Box mt={2} mb={5}>
             
-            <Text mt={2}  bg='gray.500' fontSize='lg' border='1px' h={100} rounded="lg" color='white'> {data} </Text>
+            <Text mt={2}  bg='gray.500' fontSize='lg' border='1px' h={180} rounded="lg" color='white'> {data} </Text>
             </Box>
 
             </Flex>
@@ -107,12 +107,12 @@ function Chatbot() {
             </Flex>
 
             <Flex justifyContent="center" gap={3} mt={5}>
-              <Button onClick={() => show(3)}>الشركات الحلال</Button>
+              <Button onClick={() => show(3)}>الشركات المتوافقة مع الشريعة</Button>
               <Button onClick={() => show(4)}>  اخر الاخبار</Button>
             </Flex>
             <Flex justifyContent="center" gap={3} mt={5}>
-              <Button onClick={() => show(5)}>الشركات الحلال</Button>
-              <Button onClick={() => show(6)}>  اخر الاخبار</Button>
+              <Button onClick={() => show(5)}> ماهو التطهير</Button>
+              <Button onClick={() => show(6)}>  من نحن؟ </Button>
             </Flex>
           
           </DrawerBody>
