@@ -29,12 +29,12 @@ function Chatbot() {
       case 1:
 
 
-         setData(`الاكثر رحبا سدايا`)
+         setData(`الشركات الاكثر ربحا لهذا اليوم في المرتبة الاولى Microsoft ثم Tesla ثم NIO`)
         console.log(data);
         break;
       case 2:
         // execute case y code block
-        setData(" الاكثر خساره هي مايكروسفت");
+        setData(" الشركات الاكثر انخفاضا لهذا اليوم في المرتبه الاولى Apple ثم Alibaba ثم Alphabet");
         break;
 
         case 3:
@@ -47,6 +47,16 @@ function Chatbot() {
             setData("   اخر الاخبار ");
       
         break;
+        case 5:
+          // execute case y code block
+          setData("   اخر الاخبار ");
+    
+      break;
+      case 6:
+        // execute case y code block
+        setData("   اخر الاخبار ");
+  
+    break;
       default:
       // execute default code block
     }
@@ -79,19 +89,30 @@ function Chatbot() {
           <DrawerHeader bg='#39505F'color={'white'} textAlign='center'>مرحبا ماذا تريد ان تعرف </DrawerHeader>
 
           <DrawerBody >
-          <AiFillRobot  size={50}/>
+            <Flex >
+            <Box>
+             <AiFillRobot  size={50}/> 
+            </Box>
+          
           <Box mt={2} mb={5}>
             
-            <Text mt={2}  bg='gray.500' fontSize='lg' border='1px' h={150} rounded="lg" color='white'> {data} </Text></Box>
+            <Text mt={2}  bg='gray.500' fontSize='lg' border='1px' h={100} rounded="lg" color='white'> {data} </Text>
+            </Box>
+
+            </Flex>
             <AiFillRobot  size={50}/>
             <Flex justifyContent="center" gap={3} mt={3} >
               <Button onClick={() => show(1)}>الشركات الاكثر ربحا</Button>
-              <Button onClick={() => show(2)}>الشركات الاكثر خساره</Button>
+              <Button onClick={() => show(2)}>الشركات الاكثر انخفاضاً</Button>
             </Flex>
 
             <Flex justifyContent="center" gap={3} mt={5}>
               <Button onClick={() => show(3)}>الشركات الحلال</Button>
               <Button onClick={() => show(4)}>  اخر الاخبار</Button>
+            </Flex>
+            <Flex justifyContent="center" gap={3} mt={5}>
+              <Button onClick={() => show(5)}>الشركات الحلال</Button>
+              <Button onClick={() => show(6)}>  اخر الاخبار</Button>
             </Flex>
           
           </DrawerBody>

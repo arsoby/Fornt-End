@@ -24,10 +24,13 @@ import {
   Slide,
   SlideFade,
   Hide,
+  useColorModeValue,
+  useColorMode,
+  background,
 } from "@chakra-ui/react";
 import axios, { Axios } from "axios";
 import React, { useState } from "react";
-import { Link as RouteLink } from 'react-router-dom'
+import { Link as RouteLink,useNavigate } from 'react-router-dom'
 
 function LogIn() {
   const [show, setShow] = React.useState(false);
@@ -36,6 +39,7 @@ function LogIn() {
   const [showCard, setShowCard] = useState(true);
   function toggleShowCard() {
     setShowCard(!showCard); }
+    const navigate = useNavigate()
 
     
 
@@ -50,7 +54,6 @@ function LogIn() {
     React.useEffect(() => {
         axios.get(api).then(res=>{
           setAllData(res.data)
-    console.log(res.data);
         })  
     },[])
 
@@ -63,9 +66,7 @@ function LogIn() {
             password
           }).then(res=>{
               console.log(res.data);
-              // localStorage.setItem("firestName" , res.data.firestName)
-              // localStorage.setItem("lastName" , res.data.lastName)
-              // localStorage.setItem("id",res.data.id)
+
               
   
           })
@@ -80,7 +81,7 @@ function LogIn() {
 
     function forwed() {
       if (email=="" || password=="") {
-        alert("Check the correct Email or Password")
+        alert("Enter Email or Password")
       }
       else{
       axios.get(api).then(res=>{setAllData(res.data)
@@ -89,12 +90,16 @@ function LogIn() {
        for (let i = 0; i < allData.length; i++) {
         if (allData[i].password==password&&allData[i].email==email) {
           correct=true;id=i
+          setData(allData[i])
+          
           break;
-        setData(allData[i])
         }    
        }
        if (correct==true) {
-        localStorage.setItem("userName",data[id].userName);}
+        localStorage.setItem("userName",allData[id].userName);
+        navigate(`/`)
+
+      }else {alert("Email Or Password Incorrect")}
         
       }
         
@@ -102,6 +107,9 @@ function LogIn() {
         
       
     }
+    const { toggleColorMode } = useColorMode()
+    const bgg = useColorModeValue('#48b064', 'red.200')
+  const color = useColorModeValue('white', 'gray.800')
     
 
   return (
@@ -124,7 +132,7 @@ function LogIn() {
 
           <Card w={"100%"} h={"100%"}  bg="#39505F">
          <CardHeader mb="5">
-         <Heading  textAlign={"center"}>تسجيل الدخول</Heading>
+         <Heading color='white'  textAlign={"center"}>تسجيل الدخول</Heading>
          </CardHeader>
            <CardBody>
             
@@ -135,7 +143,8 @@ function LogIn() {
                
                <InputGroup size="md">
                  <Input bg={"whitesmoke"} 
-                   pl="4.5rem"
+                   pr="1rem"
+                   fontSize={"1.rem"}
                    type={show ? "text" : "password"}
                    placeholder="كلمة السر" textAlign={"right"}
                    onChange={e =>{setPassword(e.target.value)}}/>
@@ -149,10 +158,15 @@ function LogIn() {
            </CardBody>
            <Center pb={"10px"}>
            
-             <Button  bg={"#48b064"} w="60%"
-              onFocus={forwed}
-             ><RouteLink to={"/"}> 
-               تسجيل الدخول</RouteLink>
+             <Button  bg={"#48b064"} 
+             _hover={{color:"gray.800",backgroundColor:"wihte"}}
+             
+             color="white" w="75%"
+              onClick={forwed}
+             >
+              {/* <RouteLink to={"/"}></RouteLink>  */}
+             <Text></Text>
+               تسجيل الدخول
              </Button>
             
            </Center>
@@ -166,14 +180,16 @@ function LogIn() {
          <Card bg={"#001F33"} w={"100%"} h={"100%"} display={"flex"} flexDir="column" align="center"  >
            <CardBody pos={"absolute"}  bottom="40%" >
             <SimpleGrid spacingY={3}  >
-             <Text textAlign={"center"} color="white">
+             <Text textAlign={"center"} color="white" fontSize={"1.3rem"} >
               ليس لديك حساب ؟ 
              </Text>
-             <Text textAlign={"center"} color="white">من فضلك قم بإنشاء حساب جديد</Text>
+             <Text textAlign={"center"} color="white" fontSize={"1.3rem"} >من فضلك قم بإنشاء حساب جديد</Text>
              <Center>
 
              <Button onClick={toggleShowCard}
-              bg={"#48b064"} w="60%">
+             _hover={{color:"gray.800",backgroundColor:"wihte"}}
+             color="white"_focus={{color:"gray.800",backgroundColor:"wihte"}}
+              bg={"#48b064"} w="75%" fontSize={"1.1rem"}>
                تسجيل جديد
              </Button>
              </Center>
@@ -193,14 +209,16 @@ function LogIn() {
         <Card bg={"#001F33"} w={"100%"} h={"100%"} display={"flex"} flexDir="column" align="center" pos={"relative"} >
            <CardBody pos={"absolute"}  bottom="50%">
             <SimpleGrid spacingY={3} >
-             <Text textAlign={"center"} color="white">
+             <Text textAlign={"center"} color="white" fontSize={"1.3rem"} >
               مرحباً بك  
              </Text>
              <Text textAlign={"center"}></Text>
              <Center>
-
              <Button onClick={toggleShowCard}
-              bg={"#48b064"} w="100%">
+             _hover={{color:"gray.800",backgroundColor:"wihte"}}
+             color="white"_focus={{color:"gray.800",backgroundColor:"wihte"}}
+             
+              bg={"#48b064"} w="100%" fontSize={"1.1rem"}>
                تسجيل الدخول
              </Button>
              </Center>
@@ -220,7 +238,7 @@ function LogIn() {
                onChange={e =>{setUserName(e.target.value)}} />
                <InputGroup size="md">
                  <Input bg={"whitesmoke"} 
-                   pl="4.5rem"
+                   pr="1rem"
                    type={show ? "text" : "password"}
                    placeholder="كلمة السر" textAlign={"right"}
                    onChange={e =>{setPassword(e.target.value)}}
@@ -234,7 +252,9 @@ function LogIn() {
              </SimpleGrid>
            </CardBody>
            <Center pb={"10px"}>
-             <Button  bg={"#48b064"} w="60%" onClick={PostData}>
+             <Button  bg={"#48b064"} w="60%"  onClick={PostData} 
+             _hover={{color:"gray.800",backgroundColor:"wihte"}}
+             color="white">
                تسجيل جديد
              </Button>
            </Center>
