@@ -21,7 +21,7 @@ function Routes() {
 <Routess>
         <Route  path='/' element={<Home/>}></Route>
         <Route  path='/companies' element={<Companies/>}></Route>
-        <Route  path='/company/:id' element={<Company />}></Route>
+        <Route  path='/company/:id' element={<Company/>}></Route>
         <Route  path='/calculator' element={<Calculator/>}></Route>
         <Route  path='/login' element={<LogIn/>}></Route>
     </Routess>
