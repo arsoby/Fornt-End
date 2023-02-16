@@ -1,10 +1,31 @@
 import { Badge, Box, Button, chakra, Heading, Link, SimpleGrid, Text, Image } from '@chakra-ui/react'
 import React from 'react'
-import { Link as RouteLink } from 'react-router-dom'
+import { Link as RouteLink, useParams } from 'react-router-dom'
 import { BsStar } from 'react-icons/bs'
 import MicosoftLogo from './../assets/microsoft.png'
+import axios from 'axios'
 
 function Company() {
+
+    const params = useParams()
+    const id = params.id
+
+    // console.log(id);
+
+    const [data,setData]=React. useState<any[]>([]);
+
+    const api = `https://63e226a5ad0093bf29c8eb0d.mockapi.io/lab/${id}`
+
+    React.useEffect(()=>{
+        axios.get(api).then(res=>{
+            setData(res.data)
+        })
+    },[])
+
+    console.log(data["0"].nameOfCompany);
+    
+    
+
   return (
     <Box>
         <br></br>

@@ -141,22 +141,22 @@ function Home() {
           <Box bgColor={"#001F33"}>
             <SimpleGrid columns={6} gap={"12"} p={"6"}>
               
-              <Link to={""}>
+              <Link to={"/company/1"}>
                 <Image src='https://logo.clearbit.com/Microsoft.com'></Image>
               </Link>
-              <Link to={""}>
+              <Link to={"/company/2"}>
                 <Image src='https://logo.clearbit.com/Tesla.com'></Image>
               </Link>
-              <Link to={""}>
+              <Link to={"/company/3"}>
                 <Image src='https://logo.clearbit.com/Apple.com'></Image>
               </Link>
-              <Link to={""}>
+              <Link to={"/comapny/4"}>
                 <Image src='https://logo.clearbit.com/Alibaba.com'></Image>
               </Link>
-              <Link to={""}>
+              <Link to={"/company/5"}>
                 <Image src='https://logo.clearbit.com/NIO.com'></Image>
               </Link>
-              <Link to={""}>
+              <Link to={"/company/6"}>
                 <Image src='https://logo.clearbit.com/AMC.com'></Image>
               </Link>
             </SimpleGrid>
